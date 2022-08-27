@@ -1,0 +1,69 @@
+html {
+   margin: 0 3ch;
+}
+
+body {
+   background: black;
+   color: white;
+   max-width: 120ch;
+   margin: 0 auto;
+}
+
+input[type="checkbox"] {
+   visibility: hidden;
+   width: 0;
+   height: 0;
+   margin: 0;
+}
+
+.checkbox-test {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   cursor: pointer;
+   font-size: larger;
+}
+
+.label-test {
+   display: grid;
+   grid-column-start: 1;
+   grid-row-start: 1;
+   cursor: pointer;
+}
+
+.checkbox-test input[type=checkbox]+label::before {
+   display:grid;
+   grid-column-start: 1;
+   grid-row-start: 1;
+   content: "V ";
+   height: 0px;
+   font-weight: bold;
+}
+
+.checkbox-test input[type=checkbox]:checked+label::before {
+   display:grid;
+   grid-column-start: 1;
+   grid-row-start: 1;
+   content: "^ ";
+   font-weight: bold;
+}
+
+.checkbox-test input[type=checkbox]:checked+label+div::after {
+   font-size: smaller;
+   content: "wow here's the cool text this took way too much effort and probably "
+            "doesn't even look that good.  Oh well, at least it's the basis for "
+            "building something better.";
+}
+
+.button {
+   display:grid;
+   grid-column-start: 1;
+   grid-row-start: 1;
+   cursor: inherit;
+}
+
+.checkbox-text {
+   display:grid;
+   grid-column-start: 1;
+   grid-row-start: 1;
+}
