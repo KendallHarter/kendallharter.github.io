@@ -51,6 +51,7 @@ input[type="checkbox"] {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 2;
+   cursor: auto;
 }
 
 .checkbox-test input[type=checkbox]:checked+label+div {
@@ -64,5 +65,4 @@ input[type="checkbox"] {
 .button {
    grid-column-start: 2;
    grid-row-start: 1;
-   cursor: inherit;
 }
