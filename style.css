@@ -9,14 +9,7 @@ body {
    margin: 0 auto;
 }
 
-input[type="checkbox"] {
-   visibility: hidden;
-   width: 0;
-   height: 0;
-   margin: 0;
-}
-
-.checkbox-test {
+.dropdown {
    display: inline-grid;
    width: 100%;
    grid-template-columns: auto;
@@ -25,27 +18,35 @@ input[type="checkbox"] {
    font-size: larger;
 }
 
-.label-test {
+.dropdown input[type="checkbox"] {
+   visibility: hidden;
+   width: 0;
+   height: 0;
+   margin: 0;
+}
+
+.dropdown input+label {
    grid-column-start: 1;
    grid-row-start: 1;
    cursor: pointer;
 }
 
-.checkbox-test input[type=checkbox]+label::before {
+
+.dropdown input[type=checkbox]+label::before {
    content: "V ";
    display: inline-block;
    width: 1em;
    font-weight: bold;
 }
 
-.checkbox-test input[type=checkbox]:checked+label::before {
+.dropdown input[type=checkbox]:checked+label::before {
    content: "^ ";
    display: inline-block;
    width: 1em;
    font-weight: bold;
 }
 
-.checkbox-test input[type=checkbox]+label+div {
+.dropdown input[type=checkbox]+label+div {
    font-size: smaller;
    display: none;
    grid-column-start: 1;
@@ -54,15 +55,10 @@ input[type="checkbox"] {
    cursor: auto;
 }
 
-.checkbox-test input[type=checkbox]:checked+label+div {
+.dropdown input[type=checkbox]:checked+label+div {
    font-size: smaller;
    display: grid;
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 2;
-}
-
-.button {
-   grid-column-start: 2;
-   grid-row-start: 1;
 }
