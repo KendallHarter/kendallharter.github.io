@@ -48,11 +48,14 @@ input[type="checkbox"] {
    font-weight: bold;
 }
 
-.checkbox-test input[type=checkbox]:checked+label+div::after {
+.checkbox-test input[type=checkbox]+label+div {
    font-size: smaller;
-   content: "wow here's the cool text this took way too much effort and probably "
-            "doesn't even look that good.  Oh well, at least it's the basis for "
-            "building something better.";
+   display: none;
+}
+
+.checkbox-test input[type=checkbox]:checked+label+div {
+   font-size: smaller;
+   display: block;
 }
 
 .button {
