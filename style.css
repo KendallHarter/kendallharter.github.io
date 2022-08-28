@@ -17,56 +17,52 @@ input[type="checkbox"] {
 }
 
 .checkbox-test {
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 1fr;
+   display: inline-grid;
+   width: 100%;
+   grid-template-columns: auto;
+   grid-template-rows: auto auto;
    cursor: pointer;
    font-size: larger;
 }
 
 .label-test {
-   display: grid;
    grid-column-start: 1;
    grid-row-start: 1;
    cursor: pointer;
 }
 
 .checkbox-test input[type=checkbox]+label::before {
-   display:grid;
-   grid-column-start: 1;
-   grid-row-start: 1;
    content: "V ";
-   height: 0px;
+   display: inline-block;
+   width: 1em;
    font-weight: bold;
 }
 
 .checkbox-test input[type=checkbox]:checked+label::before {
-   display:grid;
-   grid-column-start: 1;
-   grid-row-start: 1;
    content: "^ ";
+   display: inline-block;
+   width: 1em;
    font-weight: bold;
 }
 
 .checkbox-test input[type=checkbox]+label+div {
    font-size: smaller;
    display: none;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 2;
 }
 
 .checkbox-test input[type=checkbox]:checked+label+div {
    font-size: smaller;
-   display: block;
+   display: grid;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 2;
 }
 
 .button {
-   display:grid;
-   grid-column-start: 1;
+   grid-column-start: 2;
    grid-row-start: 1;
    cursor: inherit;
-}
-
-.checkbox-text {
-   display:grid;
-   grid-column-start: 1;
-   grid-row-start: 1;
 }
