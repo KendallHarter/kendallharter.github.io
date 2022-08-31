@@ -62,3 +62,27 @@ body {
    grid-column-end: 2;
    grid-row-start: 2;
 }
+
+.grid-test {
+   display: inline-grid;
+   grid-template-columns: 100%;
+   grid-template-rows: auto;
+   padding: 2ch;
+}
+
+@media (min-width: 120ch) {
+   .grid-test {
+      display: inline-grid;
+      grid-template-columns: repeat(auto-fill, 58ch);
+      grid-template-rows: auto;
+      padding: 2ch;
+   }
+   
+   .grid-left {
+      grid-column-start: 1;
+   }
+
+   .grid-right {
+      grid-column-start: 2;
+   } 
+}
